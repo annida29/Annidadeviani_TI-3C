@@ -3,13 +3,13 @@
 		<div class="col mt-4">
 
 			<!-- awal validasi error -->
-			<?php if(validation_errors()) : ?>
+			<!-- <?php if(validation_errors()) : ?>
 				<div class="alert alert-danger" role="alert">
-							<!-- button from bootstrap, search "alerts" take "dismissing (button code)" -->
+										button from bootstrap, search "alerts" take "dismissing (button code)" 
 					  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 					<?= validation_errors (); ?>
 				</div>
-			<?php endif; ?>
+			<?php endif; ?> -->
 			<!-- akhir validasi error -->
 
 			<!-- Button trigger modal -->
@@ -33,8 +33,9 @@
 				<?php endif; ?>
 			<!-- akhir flash data -->
 
-			<div class="row mt-3">
-				<div class="col-md-5">
+<!-- place button untuk cari data -->
+			<div class="row mt-2">
+				<div class="col-md-12">
 					<form action="" method="post">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="cari data mahasiswa..." name="keyword">
@@ -85,6 +86,7 @@
 			        	<label for="jurusan">Jurusan</label>
 			        	<select class="form-select" id="jurusan" name="jurusan">
 			        		<option value="">Pilihan</option>
+			        		<!-- untuk memanggil database jurusan -->
 			        		<?php foreach($jurusan as $j): ?>
 			        			<option><?php echo $j['namajurusan']; ?></option>
 			        		<?php endforeach; ?>
@@ -114,6 +116,7 @@
     </tr>
   </thead>
   <tbody>
+  		<!-- foreach adalah perulangan, mirip if else, if while -->
     <?php foreach ($mahasiswa as $mhs): ?>
     	<tr>
     		<th scope="row"><?=$mhs['kode']; ?></th>
@@ -147,10 +150,12 @@
 			      </div>
 			      <div class="modal-body">
 			      
+			      			<!-- formopenmultipart fungsinya untuk menyembunyikan id -->
 			      <?= form_open_multipart('mahasiswa/ubah'); ?>
 			      <input type="hidden" name="id" value="<?= $mhs['id']; ?>"> 
 			        <div class="form group">
 			        	<label for="kode">Kode</label>
+			        	<!-- value untuk memunculkan data yang sudah ada sebelumnya, readonly fungsinya untuk mematikan dari pengubahan kode -->
 			        	<input type="numeric" name="kode" class="form-control" value="<?= $mhs ['kode']; ?>" id="kode" placeholder="Masukan Kode" readonly>
 			        </div>
 
@@ -173,6 +178,7 @@
 			        	<label for="jurusan">Jurusan</label>
 			        	<select class="form-select" id="jurusan" name="jurusan">
 			        		<option value="">Pilihan</option>
+			        				<!-- untuk memanggil database jurusan -->
 			        		<?php foreach($jurusan as $j): ?>
 			        			<option><?php echo $j['namajurusan']; ?></option>
 			        		<?php endforeach; ?>

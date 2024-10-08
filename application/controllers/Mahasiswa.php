@@ -17,12 +17,17 @@ class mahasiswa extends CI_Controller
             $data['mahasiswa'] = $this->Mahasiswa_model->cariDataMahasiswa();
         }
         $data['jurusan']=$this->Mahasiswa_model->getAllJurusan();
+
+        // required fungsinya untuk memastikan bahwa perlu untuk diisi
+        // is_unique fungsinya untuk membuat tiap kode/ nama adalah unik dan tidak bisa di tiru/ disamakan
         $this->form_validation->set_rules('kode','kode','required|is_unique[mahasiswa.kode]');
         $this->form_validation->set_rules('matakuliah','matakuliah','required|is_unique[mahasiswa.matakuliah]');
         $this->form_validation->set_rules('sks','sks','required');
         $this->form_validation->set_rules('semester','semester','required');
         $this->form_validation->set_rules('jurusan','jurusan','required');
-        
+        //
+
+
         if($this->form_validation->run()==false){    
     	$this->load->view('templates/header',$data);
     	$this->load->view('mahasiswa/index',$data);
