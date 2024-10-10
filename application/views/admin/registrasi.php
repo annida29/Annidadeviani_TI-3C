@@ -1,4 +1,4 @@
- <div class="card">
+<div class="card">
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
 
@@ -37,7 +37,7 @@
         </div>
         <div class="row">
           <div class="col-8">
-            
+           
           </div>
           <!-- /.col -->
           <div class="col-4">
@@ -47,9 +47,11 @@
         </div>
       </form>
 
-      <a href="<?= base_url('admin/login')?>">Back to Log in</a>
+      
+
+      <a href="<?= base_url('admin/login') ?>">Back to login</a>
     </div>
-  <!-- /.form-box -->
+    <!-- /.form-box -->
   </div><!-- /.card -->
 </div>
 <!-- /.register-box -->

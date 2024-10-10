@@ -1,3 +1,4 @@
+<!-- Asal dari adminlte/login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,5 +18,5 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?= base_url('assets/') ?>index2.html"><b></a>
+    <a href="<?= base_url('assets/') ?>index2.html"></a>
   </div>

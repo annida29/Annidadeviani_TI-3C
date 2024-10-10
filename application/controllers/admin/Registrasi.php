@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 
 
 class Registrasi extends CI_Controller

@@ -1,3 +1,4 @@
+<!-- Asal dari adminlte/login.html -->
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
@@ -31,13 +32,12 @@
         </div>
       </form>
 
-      
 
       <p class="mb-1">
-        <a href="<?= base_url('beranda') ?>">Back to Beranda</a>
+        <a href="<?= base_url('beranda')?>">Back to Beranda</a>
       </p>
       <p class="mb-0">
-        <a href="<?= base_url('admin/registrasi')  ?>" class="text-center">Register a new membership</a>
+        <a href="<?= base_url('admin/registrasi')?>" class="text-center">Register a new membership</a>
       </p>
     </div>
     <!-- /.login-card-body -->
