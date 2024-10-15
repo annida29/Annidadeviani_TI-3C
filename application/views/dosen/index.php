@@ -3,10 +3,10 @@
 		<div class="col mt-4">
 
 			<div class="row mt-3">
-          <div class="col-md-8">
+          	<div class="col-md-8">
 			        <a href="<?= base_url(); ?>dosen/tambah" class="btn btn-primary">Tambah Dosen</a>
-			      </div>
-			    </div>
+			</div>
+		    </div>
 
 			<!-- awal flashdata -->
       <?php if($this->session->flashdata('flash')) : ?>
@@ -22,33 +22,31 @@
       <!-- akhir flashdata -->
 
 <!-- row dan col hanya jika ingin digunakan -->
-			<!-- <div class="row mt-4">
-				<div class="col-md-6"> -->
+			<div class="row mt-3"> 
+				<div class="col-md-7"> 
 					<form action="" method="post">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="cari data Dosen..." name="keyword">
 							<div class="input-group-append">
-								<button class="bt-primary" type="submit">cari</button>
+								<button class="badge bg-primary" type="submit">cari</button>
 						</div>
 					</form>
 				</div>
 			</div>
       <!-- Daftar nama Dosen -->
-      <!-- row dan col hanya jika ingin digunakan -->
-      <!-- <div class="row mt-4">
-          <div class="col-md-6"> -->
-          <h3>DAFTAR NAMA DOSEN</h3>	    
+      	<!-- row dan col hanya jika ingin digunakan untuk tampilan-->
+      	<!-- <div class="row mt-4">
+           	 <div class="col-md-6"> -->
+          <h3>DAFTAR NAMA DOSEN</h3>    
 			<ul class="list-group">
 				  <?php foreach($dosen as $dsn): ?>
       <li class="list-group-item">
       	  <?= $dsn['namadosen']; ?>
-      	  <a href="<?= base_url();?>dosen/hapus<?= $dsn['id']; ?>" class=" badge bg-danger float-end" onclick="return confirm('Anda Yakin');">Hapus</a>
-      	  <a href="<?= base_url();?>dosen/ubah<?= $dsn['id']; ?>" class=" badge bg-success float-end">Ubah</a>
-          <a href="<?= base_url();?>dosen/detail<?= $dsn['id']; ?>" class=" badge bg-primary float-end">Detail</a>
-
-
+      	  <a href="<?= base_url();?>dosen/hapus/<?= $dsn['id']; ?>" class=" badge bg-danger float-end" onclick="return confirm('Anda Yakin?');">Hapus</a>
+      	  <a href="<?= base_url();?>dosen/ubah/<?= $dsn['id']; ?>" class=" badge bg-success float-end">Ubah</a> 
+          <a href="<?= base_url();?>dosen/detail/<?= $dsn['id']; ?>" class=" badge bg-primary float-end">Detail</a>
+<!-- ada beberapa macam tombol, yaitu btn btn-(warna), atau badge bg-(warna) -->
       </li>
       <?php endforeach; ?>
       </ul>
-      </div>
 	

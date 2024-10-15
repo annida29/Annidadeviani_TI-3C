@@ -29,7 +29,10 @@
           <a class="nav-link" href="Dosen">Dosen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('admin/login') ?>">Login</a>
+          <a class="nav-link" href="<?= base_url('login') ?>">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= base_url('Login/logout') ?>">Log Out</a>
         </li>
       </ul>
     </div>

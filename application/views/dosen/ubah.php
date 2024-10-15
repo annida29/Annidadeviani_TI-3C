@@ -3,21 +3,22 @@
           <div class="col-md-5">
           <div class="card">
                <div class="card-header">
-               Form Tambah Data Dosen
+               Form Ubah Data Dosen
                </div>
                <div class="card-body">
                     <form action=""method="post">
-               <div class="form-group">
+                         <input type="hidden" name="id" value="<?=$dosen['id']; ?>
+               <div class="form-group>
                     <label for="nip">NIP</label>
-                    <input type="text" class="form-control" id="nip" name="nip">
+                    <input type="text" class="form-control" value="<?=$dosen ['nip'];?>" id="nip" name="nip">
                     <small class="form-text text-danger" ><?= form_error('nip')?></small>
                </div>
                <div class="form-group">
                     <label for="namadosen">Nama Dosen</label>
-                    <input type="text" class="form-control" id="namadosen" name="namadosen">
+                    <input type="text" class="form-control"  value="<?=$dosen ['namadosen'];?>" id="namadosen" name="namadosen">
                     <small class="form-text text-danger" ><?= form_error('namadosen')?></small>
                </div>
-               <button type="submit" name="tambah" class="btn btn-primary float-end">Tambah</button>
+               <button type="submit" name="ubah" class="btn btn-primary float-end">Ubah</button>
                </form>
           </div>
      </div>
