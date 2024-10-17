@@ -21,7 +21,7 @@
 				<div class="row mt-3">
 					<div class="col md-8">
 					<div class="alert alert-success alert-dismissible fade show" role="alert">
-					Data Mahasiswa<strong>Berhasil</strong><?= $this->session->flashdata('flash');?>
+					Data Mahasiswa<strong> Berhasil </strong><?= $this->session->flashdata('flash');?>
 					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 					</div>
 					</div>
@@ -82,7 +82,7 @@
 			        	<select class="form-select" id="jurusan" name="jurusan">
 						<option value="">Pilihan</option>
 						<?php foreach($jurusan as $j):?>
-						<option><?php echo $j['nama jurusan']; ?></option>
+						<option><?php echo $j['namajurusan']; ?></option>
 						<?php endforeach; ?>
 					</select>
 					<small class="form-text text-danger"><?= form_error('jurusan') ?></small>
@@ -168,9 +168,10 @@
 					   <select class="form-select" id="jurusan" name="jurusan">
 						<option value="">Pilihan</option>
 						<?php foreach($jurusan as $j):?>
-						<option><?php echo $j['nama jurusan']; ?></option>
+						<option><?php echo $j['namajurusan']; ?></option>
 						<?php endforeach; ?>
 					</select>   	
+					<small class="form-text text-danger"><?= form_error('jurusan') ?></small>
 				</div>
 			      </div>
 			      <div class="modal-footer">

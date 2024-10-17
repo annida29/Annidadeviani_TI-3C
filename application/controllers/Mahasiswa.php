@@ -25,7 +25,7 @@ class mahasiswa extends CI_Controller
         $this->form_validation->set_rules('matakuliah','Matakuliah','required|is_unique[mahasiswa.matakuliah]');
         $this->form_validation->set_rules('sks','Sks','required');
         $this->form_validation->set_rules('semester','Semester','required');
-        $this->form_validation->set_rules('jurusan','jurusan','required');
+        $this->form_validation->set_rules('jurusan','Jurusan','required');
         if($this->form_validation->run()==false){    
         $this->load->view('templates/header',$data);
         $this->load->view('mahasiswa/index',$data);

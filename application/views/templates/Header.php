@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title><?php echo $judul; ?></title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
   </head>
   <body>
   <nav class="navbar fixed-top navbar-dark bg-dark">

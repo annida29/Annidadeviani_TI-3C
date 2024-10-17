@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new membership</p>
+      <p class="login-box-msg">Register</p>
 
       <form action="<?= base_url('registrasi') ?>" method="post">
         <!-- untuk kolom nama lengkap -->
